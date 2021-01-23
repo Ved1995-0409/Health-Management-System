@@ -1,0 +1,161 @@
+import datetime
+def timekyaha():
+    return datetime.datetime.now()
+
+print("Health management system:")
+print("Customer list:")
+print("1.Ved\n2.Prakash\n3.Yadav")
+print("Enter name from above list:")
+name=str(input())
+
+try:
+    if name=="Ved":
+        print("Enter options:")
+        print("1. for logging diet\n2. for viewing diet\n3. for logging exercise\n4. for viewing exercise")
+        op=int(input())
+        if op==1:
+            val=input("Enter food for ved here")
+            with open("food1.txt","a") as op:
+                op.write("["+str(timekyaha())+"]"+" "+val+"\n")
+                print("Want to add more press y/n:")
+                more=input()
+                while more is not "n":
+                    val = input("Enter food for ved here")
+                    with open("food1.txt", "a") as op:
+                        op.write("[" + str(timekyaha()) + "]" + " " + val + "\n")
+                        print("Want to add more press y/n:")
+                        more = input()
+                        continue
+
+
+        elif op==2:
+            fpv=open("food1.txt","r")
+            cont=fpv.read()
+            print(cont)
+            fpv.close()
+
+
+        elif op==3:
+            val=input("Enter exercise for ved here")
+            with open("ex1.txt", "a") as op:
+                op.write("["+str(timekyaha())+"]"+" "+val+"\n")
+                print("Want to add more y/n:")
+                more=input()
+                while more is not "n":
+                    val = input("Enter exercise for ved here")
+                    with open("ex1.txt", "a") as op:
+                        op.write("[" + str(timekyaha()) + "]" + " " + val + "\n")
+                        print("Want to add more y/n:")
+                        more = input()
+                        continue
+
+
+        elif op==4:
+            fpv1 = open("ex1.txt","r")
+            cont1=fpv1.read()
+            print(cont1)
+            fpv1.close()
+
+
+    elif name=="Prakash":
+        print("Enter options:")
+        print("1. for logging diet\n2. for viewing diet\n3. for logging exercise\n4. for viewing exercise")
+        op1 = int(input())
+        if op1 == 1:
+            val=input("Enter food for prakash  here")
+            with open("foodp.txt", "a") as op:
+                op.write("["+str(timekyaha())+"]"+" "+val+"\n")
+                print("Want to add more y/n:")
+                more=input()
+                while more is not "n":
+                    val = input("Enter food for prakash  here")
+                    with open("foodp.txt", "a") as op:
+                        op.write("[" + str(timekyaha()) + "]" + " " + val + "\n")
+                        print("Want to add more y/n:")
+                        more = input()
+                        continue
+
+
+        elif op1 == 2:
+            fpp = open("foodp.txt", "r")
+            cont = fpp.read()
+            print(cont)
+            fpp.close()
+        elif op1 == 3:
+            val=input("Enter exercise for Prakash here")
+            with open("exp.txt", "a") as op:
+                op.write("["+str(timekyaha())+"]"+" "+val+"\n")
+                print("Want to add more y/n:")
+                more=input()
+                while more is not "n":
+                    val = input("Enter exercise for Prakash here")
+                    with open("exp.txt", "a") as op:
+                        op.write("[" + str(timekyaha()) + "]" + " " + val + "\n")
+                        print("Want to add more y/n:")
+                        more = input()
+                        continue
+
+
+        elif op1 == 4:
+            fpp1 = open("exp.txt", "r")
+            cont1 = fpp1.read()
+            print(cont1)
+            fpp1.close()
+
+
+    elif name=="Yadav":
+        print("Enter options:")
+        print("1. for logging diet\n2. for viewing diet\n3. for logging exercise\n4. for viewing exercise")
+        op2 = int(input())
+        if op2 == 1:
+            val=input("Enter food for yadav here")
+            with open("foody.txt", "a") as op:
+                op.write("["+str(timekyaha())+"]"+" "+val+"\n")
+                print("Want to add more y/n:")
+                more=input()
+                while more is not "n":
+                    val = input("Enter food for yadav here")
+                    with open("foody.txt", "a") as op:
+                        op.write("[" + str(timekyaha()) + "]" + " " + val + "\n")
+                        print("Want to add more y/n:")
+                        more = input()
+                        continue
+
+
+        elif op2 == 2:
+            fpy = open("foody.txt", "r")
+            cont = fpy.read()
+            print(cont)
+            fpy.close()
+        elif op2 == 3:
+            val=input("Enter exercise for yadav here")
+            with open("exy.txt", "a") as op:
+                op.write("["+str(timekyaha())+"]"+" "+val+"\n")
+                print("Want to add nore y/n:")
+                more=input()
+                while more is not "n":
+                    val = input("Enter exercise for yadav here")
+                    with open("exy.txt", "a") as op:
+                        op.write("[" + str(timekyaha()) + "]" + " " + val + "\n")
+                        print("Want to add nore y/n:")
+                        more = input()
+                        continue
+
+
+        elif op2 == 4:
+            with open("exy.txt", "r") as x:
+                c=x.read()
+                print(c)
+    else :
+        print("Invalid name selected")
+        
+
+except Exception as e:
+    print(e)
+    print("Invalid name selected")
+
+
+
+
+
+
